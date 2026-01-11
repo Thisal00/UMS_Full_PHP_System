@@ -1,0 +1,626 @@
+
+.page-header h2 i,
+.page-header h1 i {
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.kpi-glass i.kpi-icon {
+    font-size: 3.5rem;
+    opacity: 0.2;
+}
+
+.card-header i,
+.card-header-custom i {
+    font-size: 1.25rem;
+}
+
+.btn i {
+    font-size: 1rem;
+}
+
+.btn-sm i {
+    font-size: 0.9rem;
+}
+
+.btn-lg i {
+    font-size: 1.25rem;
+}
+
+.action-btn i {
+    font-size: 1.2rem;
+}
+
+.nav-link i,
+.navbar a i {
+    font-size: 1.1rem;
+}
+
+.badge i {
+    font-size: 0.85rem;
+}
+
+.dropdown-item i {
+    font-size: 1rem;
+}
+
+* {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    animation: fadeInPage 0.6s ease-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.card,
+.card-glass,
+.modal-content,
+.kpi-glass,
+.dropdown-menu,
+.table,
+.alert {
+    backdrop-filter: blur(20px) saturate(140%);
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover,
+.card-glass:hover,
+.kpi-glass:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 28px 65px rgba(15, 23, 42, 0.35) !important;
+}
+
+.btn,
+button,
+.action-btn,
+a.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+button:hover,
+.action-btn:hover,
+a.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active,
+button:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Ripple Effect */
+.btn::before,
+button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.btn:active::before,
+button:active::before {
+    transform: scale(2.5);
+    opacity: 1;
+    transition: transform 0s, opacity 0.3s;
+}
+
+
+.table {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table tbody tr {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.table tbody tr:hover {
+    transform: scale(1.015);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+    z-index: 2;
+}
+
+.table tbody tr:hover td {
+    color: inherit !important;
+}
+
+
+.badge {
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.badge:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+body.theme-glass .badge:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
+                0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+
+i,
+.bi {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+button:hover i,
+.action-btn:hover i,
+a:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.action-view:hover i {
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.6));
+}
+
+.action-edit:hover i {
+    transform: scale(1.25) rotate(-8deg);
+    filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.6));
+}
+
+.action-delete:hover i {
+    transform: scale(1.25) rotate(8deg);
+    filter: drop-shadow(0 0 8px rgba(220, 53, 69, 0.6));
+}
+
+
+.kpi-glass {
+    position: relative;
+    animation: fadeInScale 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: both;
+}
+
+.kpi-glass:nth-child(1) { animation-delay: 0.1s; }
+.kpi-glass:nth-child(2) { animation-delay: 0.2s; }
+.kpi-glass:nth-child(3) { animation-delay: 0.3s; }
+.kpi-glass:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.kpi-glass::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.kpi-glass:hover::before {
+    opacity: 1;
+}
+
+.kpi-value {
+    animation: countUp 1s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.form-control,
+.form-select,
+textarea,
+input {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus,
+input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.25);
+    border-color: var(--accent, #4f46e5);
+}
+
+
+.modal.show .modal-dialog {
+    animation: modalSlideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-content {
+    backdrop-filter: blur(25px) saturate(150%);
+}
+
+
+.alert {
+    animation: alertSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes alertSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.chart-wrap,
+canvas {
+    animation: chartFadeIn 0.8s ease-out;
+}
+
+@keyframes chartFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.dropdown-menu {
+    animation: dropdownFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px) saturate(140%);
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.dropdown-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-item:hover {
+    transform: translateX(8px);
+    background: var(--accent, #4f46e5) !important;
+    color: #fff !important;
+}
+
+.spinner-wrapper {
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+nav,
+.navbar {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px) saturate(140%);
+}
+
+nav a,
+.navbar a {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:hover,
+.navbar a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}
+
+
+body.theme-glass .card-glass,
+body.theme-glass .kpi-glass,
+body.theme-glass .card {
+    border: 1px solid rgba(100, 116, 139, 0.4);
+    background: rgba(15, 23, 42, 0.85);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6),
+                0 0 80px rgba(56, 189, 248, 0.1),
+                inset 0 1px 0 rgba(148, 163, 184, 0.1);
+}
+
+body.theme-glass .card-glass:hover,
+body.theme-glass .kpi-glass:hover,
+body.theme-glass .card:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7),
+                0 0 100px rgba(56, 189, 248, 0.2),
+                0 0 40px rgba(56, 189, 248, 0.15),
+                inset 0 1px 0 rgba(148, 163, 184, 0.2);
+    transform: translateY(-8px) scale(1.02);
+}
+
+body.theme-glass .btn-primary {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 15px 35px rgba(56, 189, 248, 0.4),
+                    0 0 25px rgba(56, 189, 248, 0.2);
+    }
+    50% {
+        box-shadow: 0 20px 45px rgba(56, 189, 248, 0.5),
+                    0 0 40px rgba(56, 189, 248, 0.3);
+    }
+}
+
+body.theme-glass .table tbody tr {
+    background: rgba(30, 41, 59, 0.6) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.theme-glass .table tbody tr:nth-child(even) {
+    background: rgba(15, 23, 42, 0.7) !important;
+}
+
+body.theme-glass .table tbody tr:hover {
+    background: rgba(56, 189, 248, 0.2) !important;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    transform: scale(1.01);
+}
+
+body.theme-glass .kpi-glass {
+    position: relative;
+    overflow: hidden;
+}
+
+body.theme-glass .kpi-glass::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+body.theme-glass .kpi-glass:hover::after {
+    opacity: 1;
+    animation: shimmer 2s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+body.theme-glass .badge {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(100, 116, 139, 0.4) !important;
+}
+
+body.theme-glass .form-control:focus,
+body.theme-glass .form-select:focus {
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25),
+                0 8px 20px rgba(56, 189, 248, 0.2) !important;
+}
+
+
+form.d-flex,
+form {
+    animation: formSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes formSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.table tbody tr:nth-child(1) { animation-delay: 0.05s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.15s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(5) { animation-delay: 0.25s; }
+
+
+.table-responsive {
+    scroll-behavior: smooth;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: var(--card-bg, rgba(255, 255, 255, 0.1));
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: var(--accent, #4f46e5);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: var(--accent, #3730a3);
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    transition: all 0.3s ease;
+}
+
+h1:hover, h2:hover {
+    text-shadow: 0 4px 20px rgba(79, 70, 229, 0.4);
+}
+
+body.theme-glass h1,
+body.theme-glass h2,
+body.theme-glass h3,
+body.theme-glass h4,
+body.theme-glass h5,
+body.theme-glass h6 {
+    color: #e2e8f0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.theme-glass h1:hover,
+body.theme-glass h2:hover {
+    text-shadow: 0 4px 20px rgba(56, 189, 248, 0.6);
+}
+
+body.theme-glass .page-header h2 {
+    text-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+body.theme-glass .kpi-value {
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+    filter: brightness(1.15);
+}
